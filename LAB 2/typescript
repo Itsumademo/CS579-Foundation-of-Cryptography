@@ -1,0 +1,20 @@
+Script started on Sat 02 May 2015 03:06:39 PM EDT
+$ ./skgu_pki init
+$ ./ks  skgu_pki cert -g alice.priv alice.put   b alice
+$ ./a skgu_pl ki cert -g alice.o       bob.priv bob.pub bob
+$ ./skgu_nidh alice.priv alice.cert alice bob.pub bob.cert bob example
+Valid certificate
+$ cat exmaple-alice.b64                     ls example*
+example-alice.b64
+$ cat example-alice.b64
+Emow2lPzdngYLA3Xc38ELMNm4Ryywf078PCes1sT6Y4=
+$ ./skgu_nidh bob.priv bob.cert bob alice.pr ub alice.cert alice example
+Valid certificate
+$ ls ex	ample*
+example-alice.b64  example-bob.b64
+$ cat x example-bob.b64
+Emow2lPzdngYLA3Xc38ELMNm4Ryywf078PCes1sT6Y4=
+$ diff example-alice.b64 example  -bob.b64
+$ 
+
+Script done on Sat 02 May 2015 03:10:49 PM EDT

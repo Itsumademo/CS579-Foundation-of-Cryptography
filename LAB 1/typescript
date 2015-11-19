@@ -1,0 +1,13 @@
+Script started on Sun 12 Apr 2015 03:28:05 PM EDT
+$ ./pv_keygen my_key.b64  
+$ yes "test" | head -1000 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ yes "test" | head -1015 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+
+Script done on Sun 12 Apr 2015 03:29:23 PM EDT
